@@ -1,0 +1,125 @@
+.sidebar {
+  /* width: 100vw; */
+  border-radius: 8px;
+  text-align: center;
+  height: fit-content;
+}
+@media screen and (min-width: 520px) {
+  .sidebar {
+    flex: 0.2;
+    position: sticky;
+    top: 80px;
+  }
+}
+
+.sidebar__avatar {
+  margin: 0 auto 10px;
+}
+.sidebar__top {
+  /* display: flex; */
+  border: 1px solid lightgray;
+  border-bottom: 0;
+  border-radius: 8px 8px 0 0;
+  background-color: white;
+  padding-bottom: 2vh;
+}
+
+.sidebar__top > img {
+  width: 100%;
+  height: 60px;
+  margin-bottom: -25px;
+  border-radius: 8px 8px 0 0;
+  object-fit: cover;
+}
+
+.sidebar__top > h2 {
+  font-size: 3.5vmin;
+}
+@media screen and (max-width: 520px) {
+  .sidebar__top > h2 {
+    font-size: 1rem;
+  }
+}
+.sidebar__top > h4 {
+  font-size: 2vmin;
+  padding: 0 1vh;
+  color: grey;
+}
+@media screen and (max-width: 520px) {
+  .sidebar__top > h4 {
+    font-size: 12px;
+  }
+}
+
+.sidebar__stats {
+  border: 1px solid lightgrey;
+  border-radius: 0 0 8px 8px;
+  padding: 1.5vh;
+  background-color: white;
+  font-size: 2vmin;
+}
+@media screen and (max-width: 520px) {
+  .sidebar__stats {
+    font-size: 0.8rem;
+  }
+}
+.sidebar__stat {
+  display: flex;
+  justify-content: space-between;
+  padding: 1vh 0;
+}
+.sidebar__stat > p {
+  color: grey;
+  font-weight: 600;
+}
+
+.sidebar__statNumber {
+  font-weight: 700;
+  color: #0a66c2 !important;
+}
+
+.sidebar__bottom {
+  text-align: left;
+  padding: 1.5vh;
+  border: 1px solid lightgray;
+  background-color: white;
+  margin-top: 1vh;
+  border-radius: 8px;
+}
+
+.sidebar__bottom > p {
+  font-size: 2vmin;
+  margin-bottom: 1vh;
+}
+
+@media screen and (max-width: 520px) {
+  .sidebar__bottom > p {
+    font-size: 1rem;
+  }
+}
+
+.sidebar__recentItem {
+  display: flex;
+  font-size: 2vmin;
+  color: grey;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 0.5vh;
+}
+@media screen and (max-width: 520px) {
+  .sidebar__recentItem {
+    font-size: 0.75rem;
+  }
+}
+
+.sidebar__hash {
+  margin-right: 0.5vh;
+  margin-left: 1vh;
+}
+
+.sidebar__recentItem:hover {
+  background-color: whitesmoke;
+  border-radius: 8px;
+  cursor: pointer;
+  color: black;
+}
