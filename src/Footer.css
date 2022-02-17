@@ -1,0 +1,9 @@
+.footer {
+  margin: 2vh auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer > small {
+  margin: 2vh 0 1vh;
+}
