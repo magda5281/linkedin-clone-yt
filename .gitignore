@@ -40,3 +40,4 @@ build /asset-manifest.json
 build /env.js
 build /index.html
 src/serviceWorker.js
+src/images/Magda-avatar.png
