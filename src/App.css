@@ -1,17 +1,25 @@
 .app {
   background-color: #f3f2ef;
-  /* i do not need that in cell display */
-  /* display: flex;
-  flex-direction: column;
-  align-items: center; */
 }
 .app__body {
-  margin: 2vh 2vh;
+  width: 90vw;
+  max-width: 1200px;
+  margin: 2vh auto;
   font-size: 0.8rem;
 }
-@media screen and (min-width: 520px) {
+@media screen and (min-width: 570px) {
   .app__body {
     display: flex;
-    /* flex-wrap: wrap; */
+  }
+}
+@media screen and (min-width: 570px) {
+  .app__medium {
+    flex: 1;
+  }
+}
+@media screen and (min-width: 750px) {
+  .app__medium {
+    display: flex;
+    flex: 0.8;
   }
 }

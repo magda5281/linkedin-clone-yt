@@ -17,7 +17,7 @@ function HeaderOption({ avatar, Icon, title, onClick }) {
           width="25"
           height="25"
         >
-          {user?.displayName[0]}
+          {user?.email[0]}
         </Avatar>
       )}
       <h3 className="headerOption__title">{title}</h3>

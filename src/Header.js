@@ -9,7 +9,7 @@ import WorkIcon from "@material-ui/icons/Work";
 import ChatIcon from "@material-ui/icons/Chat";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import AppsIcon from "@material-ui/icons/Apps";
-import avatarImg from "./images/Magda-avatar.png";
+// import avatarImg from "./images/Magda-avatar.png";
 import { useDispatch, useSelector } from "react-redux";
 import { logout, selectUser } from "./features/userSlice.js";
 import { auth } from "./firebase";
@@ -17,6 +17,7 @@ import { auth } from "./firebase";
 function Header() {
   const dispatch = useDispatch();
   const user = useSelector(selectUser);
+
   const logoutOfApp = () => {
     dispatch(logout());
     auth.signOut();

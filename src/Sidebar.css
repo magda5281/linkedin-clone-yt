@@ -1,14 +1,18 @@
 .sidebar {
-  /* width: 100vw; */
   border-radius: 8px;
   text-align: center;
   height: fit-content;
 }
-@media screen and (min-width: 520px) {
+@media screen and (min-width: 570px) {
   .sidebar {
-    flex: 0.2;
+    flex: 1;
+  }
+}
+@media screen and (min-width: 750px) {
+  .sidebar {
     position: sticky;
     top: 80px;
+    flex: 0.4;
   }
 }
 
@@ -16,7 +20,6 @@
   margin: 0 auto 10px;
 }
 .sidebar__top {
-  /* display: flex; */
   border: 1px solid lightgray;
   border-bottom: 0;
   border-radius: 8px 8px 0 0;
@@ -56,9 +59,9 @@
   border-radius: 0 0 8px 8px;
   padding: 1.5vh;
   background-color: white;
-  font-size: 2vmin;
+  font-size: 1.7vmin;
 }
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 570px) {
   .sidebar__stats {
     font-size: 0.8rem;
   }

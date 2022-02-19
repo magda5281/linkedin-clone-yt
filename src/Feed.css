@@ -2,10 +2,14 @@
   
 } */
 
-@media screen and (min-width: 520px) {
+@media screen and (min-width: 570px) {
   .feed {
-    flex: 0.6;
-    margin: 0 2vh;
+    flex-grow: 1;
+  }
+}
+@media screen and (min-width: 750px) {
+  .feed {
+    margin-left: 1vh;
   }
 }
 
@@ -14,16 +18,9 @@
   padding: 2vh 0;
   border-radius: 8px;
   margin-top: 1vh;
-  /* border: 1px solid lightgray; */
   margin-bottom: 2vh;
 }
 
-@media screen and (min-width: 520px) {
-  .feed__inputContainer {
-    margin-top: 0;
-    padding: 2vh;
-  }
-}
 .feed__input {
   border: 1px solid lightgrey;
   border-radius: 30px;

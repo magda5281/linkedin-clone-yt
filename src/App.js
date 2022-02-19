@@ -8,7 +8,6 @@ import Sidebar from "./Sidebar.js";
 import Login from "./Login.js";
 import "./App.css";
 import Widgets from "./Widgets.js";
-import { cleanup } from "@testing-library/react";
 import Footer from "./Footer.js";
 
 function App() {
@@ -31,9 +30,9 @@ function App() {
         dispatch(logout());
       }
     });
-    return () => {
-      cleanup;
-    };
+    // return () => {
+    //   cleanup;
+    // };
   }, []);
 
   return (
@@ -43,8 +42,10 @@ function App() {
         <Login />
       ) : (
         <div className="app__body">
-          <Sidebar />
-          <Feed />
+          <div className="app__medium">
+            <Sidebar />
+            <Feed />
+          </div>
           <Widgets />
         </div>
       )}

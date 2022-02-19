@@ -11,7 +11,6 @@ import { db } from "./firebase.js";
 import firebase from "firebase/compat/app";
 import { useSelector } from "react-redux";
 import { selectUser } from "./features/userSlice";
-import { cleanup } from "@testing-library/react";
 import FlipMove from "react-flip-move";
 
 function Feed() {
@@ -32,9 +31,9 @@ function Feed() {
         )
       );
 
-    return () => {
-      cleanup;
-    };
+    // return () => {
+    //   cleanup;
+    // };
   }, []);
 
   const sendPost = (e) => {
@@ -48,6 +47,7 @@ function Feed() {
     });
     setInput("");
   };
+  // console.log(posts);
   return (
     <div className="feed">
       <div className="feed__inputContainer">

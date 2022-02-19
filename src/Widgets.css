@@ -1,15 +1,21 @@
 .widgets {
   background-color: white;
   border-radius: 8px;
-  border: 1px solig lightgrey;
+  border: 1px solid lightgrey;
   height: fit-content;
   padding: 1.5vh;
 }
-@media screen and (min-width: 520px) {
+@media screen and (min-width: 570px) {
   .widgets {
-    flex: 0.2;
     position: sticky;
     top: 80px;
+    margin-left: 1vh;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .widgets {
+    flex: 0.2;
   }
 }
 

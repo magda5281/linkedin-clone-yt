@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import "./Login.css";
 import LinkedinLogo from "./images/linkedin-logo.png";
 import { auth } from "./firebase";
-import { login, logout, selectUser } from "./features/userSlice.js";
+import { login, logout } from "./features/userSlice.js";
 import Alert from "./Alert.js";
 
 function Login() {
@@ -14,6 +14,19 @@ function Login() {
   const [nameAlert, setNameAlert] = useState(false);
   const [error, setError] = useState("");
   const dispatch = useDispatch();
+  console.log(email, password, name, profilePic);
+
+  const isValidImgLink = () => {
+    if (typeof profilePic !== "string") {
+      return false;
+    }
+    const validImgLink = profilePic.match(
+      /^http[^\?]*.(jpg|jpeg|gif|png|tiff|bmp)(\?(.*))?$/gim
+    );
+    // !== null
+    console.log(validImgLink);
+    return validImgLink;
+  };
 
   const loginToApp = (e) => {
     e.preventDefault();
@@ -36,21 +49,27 @@ function Login() {
   };
 
   const register = () => {
-    if (!name) {
+    if (!name || typeof name !== "string") {
       setNameAlert(true);
+      return;
     } else {
       setNameAlert(false);
     }
+
+    isValidImgLink(profilePic);
 
     auth
       .createUserWithEmailAndPassword(email, password)
       .then((userAuth) => {
         userAuth.user
+          // console
+          //   .log(userAuth.user)
           .updateProfile({
             displayName: name,
             photoURL: profilePic,
           })
           .then(() => {
+            console.log("are you getting in ? ");
             dispatch(
               login({
                 email: userAuth.user.email,
@@ -62,8 +81,8 @@ function Login() {
           });
       })
       .catch((err) => {
-        console.log(err.code);
         setError(err.code);
+        alert(err.code);
       });
   };
   return (
@@ -77,13 +96,18 @@ function Login() {
           type="text"
           autoComplete="true"
         />
+
         {nameAlert && <Alert alert="Please enter a full name " />}
         <input
           value={profilePic}
           onChange={(e) => setProfilePic(e.target.value)}
+          // onChange={isValidImgLink}
           placeholder="Profile picture Url (optional)"
           type="text"
         />
+        {/* {!isValidImgLink && (
+          <Alert alert="Image must be an Url image address" />
+        )} */}
         <input
           value={email}
           onChange={(e) => setEmail(e.target.value)}
