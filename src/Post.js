@@ -6,12 +6,10 @@ import ThumbUpIcon from "@material-ui/icons/ThumbUp";
 import ReplyOutlinedIcon from "@material-ui/icons/ReplyOutlined";
 import ChatOutlinedIcon from "@material-ui/icons/ChatOutlined";
 import SendIcon from "@material-ui/icons/Send";
-// import FlipMove from "react-flip-move";
 
 //flipMove needs reference to the object that will be animated
 //we wrap a child component in forwardRef and pass ref as a prop
 const Post = forwardRef(({ name, description, message, photoUrl }, ref) => {
-  console.log(typeof name);
   return (
     <div ref={ref} className="post">
       <div className="post__header">

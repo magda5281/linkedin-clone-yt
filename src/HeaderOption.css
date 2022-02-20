@@ -7,12 +7,6 @@
   margin-right: 3vh;
 }
 
-/* @media screen and (min-width: 520px) {
-  .headerOption {
-    padding: 0 3vh;
-  }
-} */
-
 .headerOption:hover {
   color: black;
 }

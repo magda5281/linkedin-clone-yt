@@ -16,17 +16,18 @@ function Login() {
   const dispatch = useDispatch();
   console.log(email, password, name, profilePic);
 
-  const isValidImgLink = () => {
-    if (typeof profilePic !== "string") {
-      return false;
-    }
-    const validImgLink = profilePic.match(
-      /^http[^\?]*.(jpg|jpeg|gif|png|tiff|bmp)(\?(.*))?$/gim
-    );
-    // !== null
-    console.log(validImgLink);
-    return validImgLink;
-  };
+  //WIP
+  // const isValidImgLink = () => {
+  //   if (typeof profilePic !== "string") {
+  //     return false;
+  //   }
+  //   const validImgLink = profilePic.match(
+  //     /^http[^\?]*.(jpg|jpeg|gif|png|tiff|bmp)(\?(.*))?$/gim
+  //   );
+  //   // !== null
+  //   console.log(validImgLink);
+  //   return validImgLink;
+  // };
 
   const loginToApp = (e) => {
     e.preventDefault();
@@ -62,8 +63,6 @@ function Login() {
       .createUserWithEmailAndPassword(email, password)
       .then((userAuth) => {
         userAuth.user
-          // console
-          //   .log(userAuth.user)
           .updateProfile({
             displayName: name,
             photoURL: profilePic,
@@ -101,10 +100,10 @@ function Login() {
         <input
           value={profilePic}
           onChange={(e) => setProfilePic(e.target.value)}
-          // onChange={isValidImgLink}
           placeholder="Profile picture Url (optional)"
           type="text"
         />
+        {/* WIP */}
         {/* {!isValidImgLink && (
           <Alert alert="Image must be an Url image address" />
         )} */}

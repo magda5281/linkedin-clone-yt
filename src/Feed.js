@@ -30,10 +30,6 @@ function Feed() {
           }))
         )
       );
-
-    // return () => {
-    //   cleanup;
-    // };
   }, []);
 
   const sendPost = (e) => {
@@ -47,7 +43,7 @@ function Feed() {
     });
     setInput("");
   };
-  // console.log(posts);
+
   return (
     <div className="feed">
       <div className="feed__inputContainer">

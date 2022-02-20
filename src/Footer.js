@@ -9,6 +9,7 @@ function Footer() {
         <a
           href="https://www.linkedin.com/in/magdalena-gozdalik/"
           rel="noreferrer"
+          target="_blank"
         >
           Magda Gozdalik{" "}
         </a>{" "}

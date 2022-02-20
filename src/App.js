@@ -30,9 +30,7 @@ function App() {
         dispatch(logout());
       }
     });
-    // return () => {
-    //   cleanup;
-    // };
+  
   }, []);
 
   return (
