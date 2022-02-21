@@ -14,7 +14,6 @@ function Login() {
   const [nameAlert, setNameAlert] = useState(false);
   const [error, setError] = useState("");
   const dispatch = useDispatch();
-  console.log(email, password, name, profilePic);
 
   //WIP
   // const isValidImgLink = () => {
@@ -57,7 +56,7 @@ function Login() {
       setNameAlert(false);
     }
 
-    isValidImgLink(profilePic);
+    // isValidImgLink(profilePic);
 
     auth
       .createUserWithEmailAndPassword(email, password)
@@ -68,7 +67,6 @@ function Login() {
             photoURL: profilePic,
           })
           .then(() => {
-            console.log("are you getting in ? ");
             dispatch(
               login({
                 email: userAuth.user.email,

@@ -1,5 +1,4 @@
 import { Avatar } from "@material-ui/core";
-// import { Avatar } from "@mui/material";
 import React from "react";
 import "./Sidebar.css";
 import background from "./images/sidebar-background.jpg";
@@ -22,7 +21,7 @@ function Sidebar() {
       <div className="sidebar__top">
         <img src={background} alt="background" />
         <Avatar src={user?.photoUrl} className="sidebar__avatar">
-          {user?.email[0]}
+          {/* {user?.email[0]} */}
         </Avatar>
         <h2>{user.displayName}</h2>
         <h4>{user.email}</h4>
