@@ -1,4 +1,5 @@
 The linkedin-clone-yt is done to further learn React, Redux ,firebase.
+It is hosted on Firebase https://linkedin-clone-yt-3da92.web.app/
 
 App is responsive and showcases Login page and Linkedin home page where posts are added. 
 
